@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Sidebar from 'react-sidebar';
+import Sidebar from 'react-sidebar'
+
 
 class App extends Component {
+
   constructor(){
     super();
     this.state = {sidebarOpen : false, sidebarDocked: false}
@@ -27,13 +29,11 @@ class App extends Component {
   mediaQueryChanged(){
     this.state({sidebarDocked: this.state.mql.matches});
   }*/
-  render() {
-    <style>
-      </style>
-    var sidebarContent = <b>Sidebar content</b>;
 
+  render() {
+     var sidebarContent = <b>Sidebar content</b>;
     return (
-      <div>
+        <div>
         <Sidebar sidebar={sidebarContent}
                 open={this.state.sidebarOpen}
                 /*docked={this.state.sidebarDocked}*/
