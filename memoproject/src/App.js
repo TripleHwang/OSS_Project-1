@@ -7,13 +7,14 @@ class App extends Component {
   constructor(){
     super();
     this.state = {sidebarOpen : false, sidebarDocked: false}
+    
   }
 
   onSetSidebarOpen(open){
     this.setState({sidebarOpen: open});
   }
 
-  componentWillMount(){
+ /* componentWillMount(){
     var mql = window.matchMedia('(min-width: 800px)');
     mql.addListener(this.mediaQueryChanged);
     this.setState({mql: mql, sidebarDocked: mql.matches});
@@ -24,18 +25,22 @@ class App extends Component {
   }
 
   mediaQueryChanged(){
-    this.setState({sidebarDocked: this.state.mql.matches});
-  }
+    this.state({sidebarDocked: this.state.mql.matches});
+  }*/
   render() {
+    <style>
+      </style>
     var sidebarContent = <b>Sidebar content</b>;
 
     return (
-      <Sidebar sidebar={sidebarContent}
-               open={this.state.sidebarOpen}
-               docked={this.state.sidebarDocked}
-               onSetOpen={this.onSetSidebarOpen}>
-        <b>Main content</b>
-      </Sidebar>
+      <div>
+        <Sidebar sidebar={sidebarContent}
+                open={this.state.sidebarOpen}
+                /*docked={this.state.sidebarDocked}*/
+                onSetOpen={this.onSetSidebarOpen}>
+          <b>Main content</b>
+        </Sidebar>
+      </div>
     );
   }
 }
