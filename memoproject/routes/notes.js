@@ -1,6 +1,8 @@
 import Router from 'koa-router'
 import Note from '../DB/Note'
 
+var fs = require('fs');
+
 const router = new Router({prefix:'/notes'})
 
 router.get('/', async  (ctx, next) => {
@@ -19,7 +21,11 @@ router.get('/', async  (ctx, next) => {
 .post('/write', async (ctx, next) => {
   let n = new Note({
     title: ctx.request.body.title,
-    contents: ctx.request.body.contents
+    contents: ctx.request.body.contents,
+    image:{
+      contentsType : 'image/png',
+      data : fs.readFileSync(ctx.request.body.picture)
+    }
   })
   n = await n.save()
   await ctx.redirect('/notes')
