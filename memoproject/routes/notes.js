@@ -23,8 +23,6 @@ router.get('/', async  (ctx, next) => {
     title: ctx.request.body.title,
     contents: ctx.request.body.contents,
     image:{
-      contentsType : 'image/png',
-      data : fs.readFileSync(ctx.request.body.picture)
     }
   })
   n = await n.save()
