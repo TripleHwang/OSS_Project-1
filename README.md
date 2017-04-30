@@ -2,7 +2,7 @@
 ### Computer Science & Engineering 2016003040 황한혁
 
 ## 1. Initial View
-![initialview](/initview.PNG)
+![initialview](/Images/initview.PNG)
 
 ## 2. Development Functions (Italic is uncompleted)
 
