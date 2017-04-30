@@ -1,0 +1,60 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='description', content='A portfolio template that uses Material Design Lite.')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, minimum-scale=1.0')
+    title MDL-Static Website
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&lang=en')
+    link(rel='stylesheet', href='https://code.getmdl.io/1.3.0/material.grey-pink.min.css')
+    link(rel='stylesheet', href='/stylesheets/styles.css')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+  body
+    .mdl-layout.mdl-js-layout.mdl-layout--fixed-header
+      header.mdl-layout__header.mdl-layout__header--waterfall.portfolio-header
+        .mdl-layout__header-row.portfolio-logo-row
+          span.mdl-layout__title
+            .portfolio-logo
+            |  
+            span.mdl-layout__title Memo
+        .demo-drawer.mdl-layout__drawer.mdl-color--blue-grey-900.mdl-color-text--blue-grey-50
+          nav.mdl-navigation.mdl-typography--body-1-force-preferred-font
+            a.mdl-navigation__link.is-active(href='/') Portfolio
+            |  
+            a.mdl-navigation__link(href='/blog') Blog
+            |  
+            a.mdl-navigation__link(href='/notes/write') write
+      .demo-drawer.mdl-layout__drawer.mdl-color--blue-grey-900.mdl-color-text--blue-grey-50
+        nav.mdl-navigation.mdl-typography--body-1-force-preferred-font
+          a.mdl-navigation__link.is-active(href='/') Portfolio
+          |  
+          a.mdl-navigation__link(href='/blog') Blog
+          |  
+          a.mdl-navigation__link(href='/notes/write') write
+      main.mdl-layout__content
+        .mdl-grid.portfolio-max-width
+         for note in notes
+          .mdl-cell.mdl-card.mdl-shadow--4dp.portfolio-card
+            .mdl-card__media
+              img.article-image(src=' images/example-work01.jpg', border='0', alt='')
+            .mdl-card__title
+              h2.mdl-card__title-text #{note.title}
+            .mdl-card__supporting-text
+              span #{note.contents}
+            .mdl-card__supporting-text
+              span #{note.time}
+            .mdl-card__actions.mdl-card--border
+              a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect.mdl-button--accent(href='showmemo') Read more
+              |  
+              a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect.mdl-button--accent(href='/notes/write') Edit
+        footer.mdl-mini-footer
+          .mdl-mini-footer__left-section
+            .mdl-logo Simple portfolio website
+          .mdl-mini-footer__right-section
+            ul.mdl-mini-footer__link-list
+              li
+                a(href='#') Help
+              li
+                a(href='#') Privacy &amp; Terms
+    script(src='https://code.getmdl.io/1.3.0/material.min.js')

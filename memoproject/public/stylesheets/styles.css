@@ -1,6 +1,6 @@
 .portfolio-header {
   position: relative;
-  background-image: url(images/header-bg.jpg);
+  background-image: url(../images/header-bg.jpg);
 }
 
 .portfolio-header .mdl-layout__header-row {
@@ -16,6 +16,49 @@
   font-weight: 300;
 }
 
+.mdl-button--file{
+  cursor: pointer;
+  height: 100%;
+  right: 0;
+  opacity: 0;
+  position: absolute;   
+  top: 0;
+  width: 300px;
+  z-index: 4;
+}
+
+.mdl-button--file {
+  input{
+    cursor: pointer;
+    height: 100%;
+    right: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 300px;
+    z-index: 4;
+  }
+}
+
+.mdl-textfield--file {
+  .mdl-textfield__input {
+    box-sizing: border-box;
+    width: calc(100% - 32px);
+  }
+  .mdl-button--file {
+    right: 0;
+  }
+}
+
+.mdl-textfield__input {
+    box-sizing: border-box;
+    width: calc(100% - 32px);
+  }
+
+.mdl-button--file {
+    right: 0;
+}
+
 .is-compact .mdl-layout__title span {
   display: none;
 }
@@ -29,7 +72,7 @@
 }
 
 .portfolio-logo {
-  background: url(images/logo.jpg) 50% no-repeat;
+  background: url(../images/logo.jpg) 50% no-repeat;
   background-size: cover;
   height: 150px;
   width: 150px;
@@ -87,15 +130,15 @@
 }
 
 .portfolio-blog-card-full-bg {
-  background: url(images/example-blog03.jpg) center / cover;
+  background: url(../images/example-blog03.jpg) center / cover;
 }
 
 .portfolio-blog-card-event-bg {
-  background: url(images/example-blog05.jpg) center / cover;
+  background: url(../images/example-blog05.jpg) center / cover;
 }
 
 .portfolio-blog-card-strip-bg {
-  background: url(images/example-blog06.jpg) center / cover;
+  background: url(../images/example-blog06.jpg) center / cover;
 }
 
 .portfolio-blog-card-compact .mdl-card__title {
@@ -163,8 +206,9 @@ img.article-image {
   margin: auto;
 }
 
+
 footer {
-  background-image: url(images/footer-background.png);
+  background-image: url(../images/footer-background.png);
   background-size: cover;
 }
 
